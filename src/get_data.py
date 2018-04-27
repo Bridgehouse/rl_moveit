@@ -21,13 +21,13 @@ group = moveit_commander.MoveGroupCommander("manipulator")
 display_trajectory_publisher = rospy.Publisher('/move_group/display_planned_path', moveit_msgs.msg.DisplayTrajectory)
 #Here we are creating a Pose object, which is the type of message that we will send as a goal. Then, we just give values to the variables that will define the goal Pose
 pose_target = geometry_msgs.msg.Pose()
-pose_target.orientation.w = 1.0
-pose_target.position.x = 0.3
-pose_target.position.y = 0
-pose_target.position.z = 1.1
-group.set_pose_target(pose_target)
+# pose_target.orientation.w = 1.0
+# pose_target.position.x = 0.3
+# pose_target.position.y = 0
+# pose_target.position.z = 1.1
+# group.set_pose_target(pose_target)
 #Finally, we are telling the "manipulator" group we created previously, to calculate the plan.
-plan1 = group.plan()
+#plan1 = group.plan()
 
 #You can get the reference frame for a certain group by executing this line:
 print "Reference frame: %s" % group.get_planning_frame()
